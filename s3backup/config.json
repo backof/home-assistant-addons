@@ -1,0 +1,28 @@
+{
+  "name": "S3 Backup",
+  "version": "1.1",
+  "slug": "s3_backup",
+  "description": "Backup snapshots to S3 bucket",
+  "startup": "before",
+  "boot": "auto",
+  "arch": [
+    "aarch64",
+    "amd64",
+    "armhf",
+    "armv7",
+    "i386"
+  ],
+  "hassio_api": true,
+  "hassio_role": "default",
+  "options": {
+    "awskey": "",
+    "awssecret": "",
+    "bucketname": ""
+  },
+  "schema": {
+    "awskey": "str",
+    "awssecret": "str",
+    "bucketname": "str"
+  },
+  "map": ["backup:rw"]
+}
